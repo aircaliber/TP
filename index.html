@@ -69,6 +69,19 @@
     ];
   
     noButton.addEventListener('click', function() {
+      // 🏃 No button runs away on hover
+noButton.addEventListener('mouseenter', () => {
+  const container = document.getElementById('responseButtons');
+
+  const maxX = container.offsetWidth - noButton.offsetWidth;
+  const maxY = 120;
+
+  const randX = Math.random() * maxX - maxX/2;
+  const randY = Math.random() * maxY - maxY/2;
+
+  noButton.style.transform = `translate(${randX}px, ${randY}px)`;
+});
+
       if (noClickCount < 5) {
         noClickCount++;
         imageDisplay.src = imagePaths[noClickCount];
@@ -99,4 +112,5 @@
 </body>
 
 </html>
+
 
