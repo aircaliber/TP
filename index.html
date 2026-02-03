@@ -81,21 +81,6 @@ noButton.addEventListener('mouseenter', () => {
 
   noButton.style.transform = `translate(${randX}px, ${randY}px)`;
 });
-
-      if (noClickCount < 5) {
-        noClickCount++;
-        imageDisplay.src = imagePaths[noClickCount];
-        buttonHeight += 35; // Increase height by 5px on each click
-        buttonWidth += 35;
-        fontSize += 25; // Increase font size by 1px on each click
-        yesButton.style.height = `${buttonHeight}px`; // Update button height
-        yesButton.style.width = `${buttonWidth}px`;
-        yesButton.style.fontSize = `${fontSize}px`; // Update font size
-        if (noClickCount < 6) {
-          noButton.textContent = ["No", "Are you sure?", "please ?", "Don't do this to me :(", "You're breaking my heart", "I'm gonna cry..."][noClickCount];
-        }
-      }
-    });
   
     yesButton.addEventListener('click', () => {
       imageDisplay.src = './images/image7.gif'; // Change to image7.gif
@@ -112,5 +97,6 @@ noButton.addEventListener('mouseenter', () => {
 </body>
 
 </html>
+
 
 
