@@ -88,9 +88,15 @@
       imageDisplay.src = './images/image7.gif'; // Change to image7.gif
       valentineQuestion.textContent = "Yayyy!! :3"; // Change the question text
       responseButtons.style.display = 'none'; // Hide both buttons
-      confetti(); // Trigger confetti animation
+      confetti({
+  particleCount: 180,
+  spread: 100,
+  origin: { y: 0.6 }
+});
+ // Trigger confetti animation
     });
   </script>  
 </body>
 
 </html>
+
